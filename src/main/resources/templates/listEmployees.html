@@ -28,9 +28,10 @@
         </thead>
         <tbody>
         <tr th:each="employee : ${employees}">
-            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.firstName}"></td>
+            <td th:text="${employee.lastName}"></td>
             <td th:text="${employee.email}"></td>
-            <td th:text="${employee.department}"></td>
+<!--            <td th:text="${employee.department}"></td>-->
             <td><a class="btn btn-info" th:href="@{/updateEmployee(employeeId=${employee.id})}">Update</a>
             <a id="delete" class="btn btn-danger" th:href="@{/deleteEmployee(employeeId=${employee.id})}">Delete </a></td>
         </tr>
